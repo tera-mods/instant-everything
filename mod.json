@@ -1,8 +1,8 @@
 {
-	"name": "instant-upgrade",
-	"update": "github:tera-mods/instant-upgrade",
-	"conflicts": ["instant-enchant", "instant-everything", "instant-soulbind"],
-	"title": "Instant Upgrade",
+	"name": "instant-everything",
+	"update": "github:tera-mods/instant-everything",
+	"conflicts": ["instant-enchant", "instant-dismantle", "instant-merge", "instant-soulbind", "instant-upgrade"],
+	"title": "Instant Everything",
 	"author": "Pinkie Pie",
-	"description": "Removes the wait timer for soulbinding & enchanting items."
+	"description": "Removes the animations for: Enchant, Upgrade, Soulbind, Merge, Dismantle."
 }
