@@ -3,6 +3,6 @@
 	"update": "github:tera-mods/instant-everything",
 	"conflicts": ["instant-enchant", "instant-dismantle", "instant-merge", "instant-soulbind", "instant-upgrade"],
 	"title": "Instant Everything",
-	"author": "Pinkie Pie",
+	"authors": ["Pinkie Pie", "m0py", "Snug", "beng"],
 	"description": "Removes the animations for: Enchant, Upgrade, Soulbind, Merge, Dismantle."
 }
