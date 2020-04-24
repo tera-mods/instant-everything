@@ -40,10 +40,11 @@ module.exports = function InstantEverything(mod) {
 	mod.hook('C_MERGE_ITEM_EXECUTE', 'raw', () => false)
 
 	// Dismantle
-	mod.hook('C_RQ_START_SOCIAL_ON_PROGRESS_DECOMPOSITION', 1, event => {
+	// Temporarily disabled as there is an ongoing bug where your character can become permanently stuck until server reboot
+	/*mod.hook('C_RQ_START_SOCIAL_ON_PROGRESS_DECOMPOSITION', 1, event => {
 		mod.send('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 1, { contract: event.contract })
 		return false
 	})
 
-	mod.hook('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 'raw', () => false)
+	mod.hook('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 'raw', () => false)*/
 }
