@@ -1,4 +1,6 @@
 module.exports = function InstantEverything(mod) {
+	mod.log.warn('There is an ongoing bug where, when performing contract-related actions during periods of server instability, your character can become unable to login until server reboot. Instant Everything may increase the chance of this happening. Please exercise caution. Unpatched since: 2019-10-15')
+
 	// Enchant/Upgrade
 	let enchanting = null
 
@@ -40,11 +42,10 @@ module.exports = function InstantEverything(mod) {
 	mod.hook('C_MERGE_ITEM_EXECUTE', 'raw', () => false)
 
 	// Dismantle
-	// Temporarily disabled as there is an ongoing bug where your character can become permanently stuck until server reboot
-	/*mod.hook('C_RQ_START_SOCIAL_ON_PROGRESS_DECOMPOSITION', 1, event => {
+	mod.hook('C_RQ_START_SOCIAL_ON_PROGRESS_DECOMPOSITION', 1, event => {
 		mod.send('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 1, { contract: event.contract })
 		return false
 	})
 
-	mod.hook('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 'raw', () => false)*/
+	mod.hook('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 'raw', () => false)
 }
