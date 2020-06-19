@@ -48,4 +48,10 @@ module.exports = function InstantEverything(mod) {
 	})
 
 	mod.hook('C_RQ_COMMIT_DECOMPOSITION_CONTRACT', 'raw', () => false)
+
+	// Exit game
+	mod.hook('S_PREPARE_EXIT', 'raw', () => {
+		mod.send('S_EXIT', 3)
+		return false
+	})
 }
